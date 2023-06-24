@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>AirBnB - Homes</title>
+	<link rel="stylesheet" type="text/css" href="../css/styles.css">
+</head>
+<body>
+	 
+    <div class="header">
+            <img  src="../images/logo.png">
+            
+
+            <div class="header__center"> 
+                <input id="search-input" type="text" placeholder="Search for" name="search">
+               
+                <!-- search icon -->
+                <img id="search-button" class="searchIcon" src="../images/searchIcon.png">
+            </div>
+           
+             
+            <div class="header__right homePage">
+                <p>Home </p>
+
+<!-- Add an image element with an ID for targeting -->
+<img  class="icons" id="myImage" src="../images/expand comboBox.png" alt="Click Me">
+
+<!-- The dialog box for login or signup selection -->
+<div id="selection" style="display: none;">
+  
+  <a href="login.html" id="login">LogIn</a>
+ 
+  <a href="signup.html" id="signup">SignUp</a>
+  
+  <a href="index.html#testimonials">Testimonials</a>
+  
+  <a href="index.html#services">Services</a>
+  
+  <a href="index.html#contactus">Contact Us</a>
+</div>
+
+
+                <a href="profile.html"><img  class="icons" src="../images/avatar.png"></a>
+
+
+        </div>
+            
+        </div>
+
+ 
+
+	<div class="searchPage__info">
+				
+				<h1 class="component">Welcome to AirBnB</h1>
+                <p style="text-align: center; color: gray; font-size: 14px; font-style: italic; margin-top: -30px; margin-bottom: 70px;">A platform that allows you to easily discover and book unique accommodations all around the globe.</p>
+
+				<!-- <button variant="outlined">Cancellation Flexibility</button>
+				<button variant="outlined">Type of place</button>
+				<button variant="outlined">Price</button>
+				<button variant="outlined">Rooms and beds</button>
+				<button variant="outlined">More filters</button> -->
+
+				<div class="checkInOut">
+					<div>
+						<p>Check In</p>
+						<input type="date" id="checkInDateInput">
+					</div>
+					<div>
+						<p>Check Out</p>
+						<input type="date" id="checkOutDateInput">
+					</div>
+                    <div>
+                        <p>Number of Guests</p>
+                        <input min="1" max="4" type="number" id="guestsInput" placeholder="Number of guests">
+                    </div>
+                    <div>
+                        <p>Payment option</p>
+                        <select id="paymentOption">
+                            <option>Select one</option>
+                            <option>Credit Card</option>
+                            <option>Online</option>
+                            <option>Cryptocurrencies</option>
+                            <option>Digital Wallets</option>
+                            <option>Bank Transfers</option>
+                            <option>Cash on Arrival</option>
+                        </select>
+                    </div>
+
+				</div>
+
+
+	</div>
+
+          <div id="error"></div>
+
+		<div id="search-results"></div>	 
+
+
+<div class="gallery"></div>
+
+ <script>
+        // Your image data
+        const images = [
+            {
+                image: '../Airbnb_images/Real-estate/real1.webp',
+                link: "interior.html",
+                title: 'Modern House, Ethiopia',
+                description: 'Hayat - CMC square',
+                price: '9432 ETB',
+                rating: "../images/rate.jpg",
+
+
+            },
+            {
+                image: '../Airbnb_images/Real-estate/real2.webp',
+                link: "interior.html",
+                title: 'Phison Real-estate, Ethiopia',
+                description: 'Summit - around Shegole',
+                price: '7469 ETB',
+                rating: "../images/rate.jpg" 
+            },
+             {
+                image: '../Airbnb_images/L-shape/L3.webp',
+                link: "interior.html",
+                title: 'L Shape Houses, Ethiopia',
+                description: 'Bethel - around Bichafoq',
+                price: '4839 ETB',
+                rating: "../images/rate.jpg" 
+            },
+             {
+                image: '../Airbnb_images/Condominium/condominium1.webp',
+                link: "interior.html",
+                title: 'Condominium, Ethiopia',
+                description: 'Jemo - around Almart supermarket',
+                price: '3738 ETB',
+                rating: "../images/rate.jpg" 
+            },
+             {
+                image: '../Airbnb_images/Traditional/trad1.webp',
+                link: "interior.html",
+                title: 'Traditional Houses, Ethiopia',
+                description: 'Kuye feche - around Mekelakeya',
+                price: '1023 ETB',
+                rating: "../images/rate.jpg" 
+            },
+             {
+                image: '../Airbnb_images/mud/mud4.webp',
+                link: "interior.html",
+                title: 'Mud Houses, Ethiopia',
+                description: 'Holeta - around Ambassador',
+                price: '1870 ETB',
+                rating: "../images/rate.jpg" 
+            },
+        ];
+
+        // Create the gallery
+        const gallery = document.querySelector('.gallery');
+
+        images.forEach((image) => {
+            const item = document.createElement('div');
+            item.classList.add('item');
+
+            const img = document.createElement('img');
+            img.src = image.image;
+
+            const link = document.createElement('a');
+            link.href = 'insidehomes.html';
+            link.textContent = "See more about " + image.title ;
+            link.style.display = 'block';
+
+
+
+            const title = document.createElement('h2');
+
+            title.textContent = image.title;
+
+            const description = document.createElement('p');
+            description.textContent = image.description;
+
+            const price = document.createElement('p');
+            price.textContent = 'Price From ' + image.price;
+
+            const rating = document.createElement('img');
+            rating.src = image.rating;
+
+            const book = document.createElement('input');
+            book.type = 'button';
+            book.value = 'Book Now';
+            book.classList.add('book');
+            book.style.width = '100%';
+            
+            const confirm = document.createElement('div');
+            confirm.classList.add('confirmation');
+
+            const error = document.createElement('div');
+            error.classList.add('error');
+
+            item.appendChild(img);
+            item.appendChild(link);
+            item.appendChild(title);
+            item.appendChild(description);
+            item.appendChild(price);
+            item.appendChild(rating);
+            item.appendChild(book);
+            item.appendChild(confirm);
+            item.appendChild(error);
+            // item.appendChild(paymentInfo);
+            gallery.appendChild(item);
+        });
+
+
+
+// search
+        function searchImages(query) {
+  var matchingImages = [];
+
+  for (var i = 0; i < images.length; i++) {
+    var image = images[i];
+
+    // Perform a search by title or price
+    if (image.title.toLowerCase().includes(query.toLowerCase()) || image.price === query) {
+      matchingImages.push(image);
+    }
+  }
+
+  // Display the search results on the webpage
+  var searchResultsContainer = document.getElementById('search-results');
+
+  if (matchingImages.length === 0) {
+    searchResultsContainer.innerHTML = "No search results found.";
+  } else {
+    searchResultsContainer.innerHTML = ""; // Clear any previous results
+
+    for (var j = 0; j < matchingImages.length; j++) {
+      var matchedImage = matchingImages[j];
+
+      // Generate the HTML or UI elements to display the matched images
+      var imageElement = document.createElement('div');
+      imageElement.className = 'results';
+      imageElement.innerHTML = `
+      <img src=${matchedImage.image}>
+      <a href=${matchedImage.link}>See detail</a>
+        <h3>${matchedImage.title}</h3>
+        <p>Description: ${matchedImage.description}</p>
+        <p>Price: ${matchedImage.price}</p>
+        <hr>
+      `;
+
+      searchResultsContainer.appendChild(imageElement);
+    }
+  }
+}
+
+// Example usage:
+// Assuming you have a search input field with ID 'search-input' and a search button with ID 'search-button'
+document.getElementById('search-button').addEventListener('click', function() {
+    var search = document.getElementById('search-input');
+    var error = document.getElementById('error');
+  var query = search.value;
+  if (search.value.length == 0){
+    error.textContent = '';
+
+    error.textContent = 'Please Insert Accomodation type you want to search for';
+  }
+  else{
+    error.textContent = '';
+    searchImages(query);
+  }
+});
+
+// book now
+
+// Get the book now button element
+const bookButton = document.querySelector('.book');
+
+// Attach a click event listener to the button
+bookButton.addEventListener('click', function() {
+  // Get the check-in and check-out input elements
+  const checkinInput = document.querySelector('#checkInDateInput');
+  const checkoutInput = document.querySelector('#checkOutDateInput');
+  const numberOfGuests = document.querySelector('#guestsInput');
+  const paymentOption = document.querySelector('#paymentOption');
+
+   const confirmationText = document.querySelector('.confirmation');
+ const error = document.querySelector('.error');
+  // Check if both check-in and check-out inputs have values
+  if (checkinInput.value && checkoutInput.value && numberOfGuests.value && paymentOption.value) {
+    // Show the confirmation text on the page
+   error.textContent = '';
+
+   checkinInput.style.border = '1px solid green';
+   checkoutInput.style.border = '1px solid green';
+   numberOfGuests.style.border = '1px solid green';
+   paymentOption.style.border = '1px solid green';
+
+    confirmationText.textContent = 'Booked Successfully!';
+  } else {
+    // Display error message to fill out check-in and check-out dates
+   confirmationText.textContent = '';
+
+   checkinInput.style.border = '1px solid red';
+   checkoutInput.style.border = '1px solid red';
+   numberOfGuests.style.border = '1px solid red';
+   paymentOption.style.border = '1px solid red';
+
+    error.textContent = 'Please fill out necessary informations';
+  }
+   confirmationText.style.display = 'block';
+});
+
+    </script>
+   
+		
+ <!-- Include footer -->
+   <object data="footer.html" id="footer" style="width:100%"></object>
+<script type="text/javascript" src="../js/script.js"></script>
+<script type="text/javascript" src="../js/combo.js"></script>
+</body>
+</html>

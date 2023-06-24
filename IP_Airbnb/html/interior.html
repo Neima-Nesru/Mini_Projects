@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Interior - AirBnB</title>
+	<link rel="stylesheet" type="text/css" href="../css/styles.css">
+</head>
+<body>
+	<div class="header">
+			<img src="../images/logo.png">
+			
+
+			<div class="header__right">
+				
+
+                <p><a href="homes.html">Back</a></p>
+				
+			</div>
+            
+		</div>
+
+		<h1 class="component">Home Components</h1>
+		<div class="interiorDesign">
+			
+		</div>
+
+		<script type="text/javascript">
+			const images = [
+            {
+                image: '../Airbnb_images/interior/interior1.jpeg'
+            },
+            {
+                image: '../Airbnb_images/interior/interior12.jpeg'
+            },
+            {
+                image: '../Airbnb_images/interior/interior13.jpeg'
+            },
+            {
+                image: '../Airbnb_images/interior/interior14.jpeg'
+            },
+            {
+                image: '../Airbnb_images/interior/interior15.jpeg'
+            },
+            {
+                image: '../Airbnb_images/interior/interior16.jpeg'
+            },
+            {
+                image: '../Airbnb_images/interior/interior17.jpeg'
+            },
+            {
+                image: '../Airbnb_images/interior/interior18.jpeg'
+            },
+            
+            ];
+
+            const gallery = document.querySelector('.interiorDesign');
+
+			images.forEach((image) => {
+            const item = document.createElement('div');
+            item.classList.add('interior');
+
+            const img = document.createElement('img');
+            img.src = image.image;
+
+             item.appendChild(img);
+            gallery.appendChild(item);
+        });
+		</script>
+</body>
+</html>

@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>AirBnB - Homes</title>
+	<link rel="stylesheet" type="text/css" href="../css/styles.css">
+</head>
+<body>
+	 
+    <div class="header">
+            <img  src="../images/logo.png">
+            
+            <div class="header__center"> 
+                <input id="search-input" type="text" placeholder="Search for" name="search">
+
+                <!-- search icon -->
+                <img id="search-button" class="searchIcon" src="../images/searchIcon.png">
+            </div>
+            
+
+
+            <div class="header__right homePage">
+                <p>Home </p>
+
+<!-- Add an image element with an ID for targeting -->
+<img  class="icons" id="myImage" src="../images/expand comboBox.png" alt="Click Me">
+
+<!-- The dialog box for login or signup selection -->
+<div id="selection" style="display: none;">
+  
+  <a href="login.html" id="login">LogIn</a>
+ 
+  <a href="signup.html" id="signup">SignUp</a>
+  
+  <a href="index.html#testimonials">Testimonials</a>
+  
+  <a href="index.html#services">Services</a>
+  
+  <a href="index.html#contactus">Contact Us</a>
+</div>
+
+                <a href="profile.html"><img  class="icons" src="../images/avatar.png"></a>
+
+        </div>
+            
+        </div>
+
+
+
+	<div class="searchPage__info">
+				
+				<h1>Available Houses</h1>
+
+				<button variant="outlined">Cancellation Flexibility</button>
+				<button variant="outlined">Type of place</button>
+				<button variant="outlined">Price</button>
+				<button variant="outlined">Rooms and beds</button>
+				<button variant="outlined">More filters</button>
+
+	</div>
+
+<div id="error"></div>
+<div id="search-results"></div>
+
+ <script>
+        // Your image data
+        const images = [
+            {
+                image: '../Airbnb_images/modernHouses/modern1.PNG',
+                heartImage: '../images/heartIcon.png',
+                location: 'Private room in Addis Ababa, Ethiopia',
+                title: 'Stay at this spacious Edwardian House',
+                under_score: '____',
+                description: '1 guest - 1 bedroom - 1 bed - 1.5 shared bathrooms - wifi - Kitchen - Free parking - Washing Machine',
+                starImage: '../images/starIcon.png',
+                rate: '3.3',
+                price: '9432 ETB',
+                totalPrice: '4932 ETB'
+            },
+            {
+                image: '../Airbnb_images/modernHouses/modern2.PNG',
+                heartImage: '../images/heartIcon.png',
+                location: 'Private room in Addis Ababa, Ethiopia',
+                title: 'Eco Retreat in the Serengeti',
+                under_score: '____',
+                description: 'Experience the raw beauty of the Serengeti at this eco-friendly retreat. Enjoy wildlife sightings - spacious rooms - and stunning views with amenities like Wildlife viewing - spacious rooms - stunning views ',
+                starImage: '../images/starIcon.png',
+                 rate: '4',
+                price: '800 ETB',
+                totalPrice: '8000 ETB'
+            },
+            {
+                image: '../Airbnb_images/mud/mud5.webp',
+                heartImage: '../images/heartIcon.png',
+                location: 'Private room in Addis Ababa, Ethiopia',
+                title: ' Maasai Mud Homestay',
+                under_score: '____',
+                description: ' Immerse yourself in the captivating charm of African mud homes, where traditional architecture meets modern comfort which have Private en-suite bathroom, Wi-Fi, delicious local cuisine',
+                starImage: '../images/starIcon.png',
+                 rate: '2',
+                price: '170 ETB',
+                totalPrice: '6900 ETB' 
+            },
+             {
+                image: '../Airbnb_images/modernHouses/modern5.PNG',
+                heartImage: '../images/heartIcon.png',
+                location: 'Private room in Addis Ababa, Ethiopia',
+                title: 'Beachfront Paradise in Zanzibar',
+                under_score: '____',
+                description: 'Indulge in the ultimate beach getaway at this luxurious Zanzibar villa. White sandy beaches, crystal-clear waters, and private pool access await you. it has amenities like  Beachfront location, private pool, stunning views.',
+                starImage: '../images/starIcon.png',
+                 rate: '5',
+                price: '1500 ETB',
+                totalPrice: '15000 ETB'
+            },
+             {
+                image: '../Airbnb_images/modernHouses/modern4.PNG',
+                heartImage: '../images/heartIcon.png',
+                location: 'Private room in Addis Ababa, Ethiopia',
+                title: 'Traditional Safari Lodge in Kruger National Park',
+                under_score: '____',
+                description: 'Immerse yourself in the heart of the African bush at this traditional safari lodge. Experience game drives, authentic cultural encounters, and comfortable accommodations. It also has amenities like Game drives, cultural encounters, comfortable accommodations.',
+                starImage: '../images/starIcon.png',
+                 rate: '3.3',
+                price: '9432 ETB',
+                totalPrice: '4932 ETB'
+            },
+             {
+                image: '../Airbnb_images/L-shape/L7.webp',
+                heartImage: '../images/heartIcon.png',
+                location: 'Private room in Addis Ababa, Ethiopia',
+                title: 'Luxury Villa Retreat in Marrakech',
+                under_score: '____',
+                description: 'Indulge in opulence at this luxurious Marrakech villa. Unwind in private pool gardens, savor Moroccan cuisine, and enjoy easy access to the city\'s vibrant attractions. It has also amenities like Private pool gardens, Moroccan cuisine, prime location.',
+                starImage: '../images/starIcon.png',
+                 rate: '5',
+                price: '2000 ETB',
+                totalPrice: '20000 ETB' 
+            },
+             
+            {
+                image: '../Airbnb_images/Traditional/trad2.jpg',
+                heartImage: '../images/heartIcon.png',
+                location: 'Private room in Addis Ababa, Ethiopia',
+                title: 'Namibian Desert Retreat',
+                under_score: '____',
+                description: ' Immerse yourself in the awe-inspiring Namibian traditional home nestled amidst the desert. Experience peace and tranquility along with breathtaking views.',
+                starImage: '../images/starIcon.png',
+                 rate: '2',
+                price: '400 ETB',
+                totalPrice: '2000 ETB' 
+            },
+            {
+                image: '../Airbnb_images/Traditional/trad3.jpg',
+                heartImage: '../images/heartIcon.png',
+                location: 'Private room in Addis Ababa, Ethiopia',
+                title: 'Serengeti Safari Lodge',
+                under_score: '____',
+                description: ' Stay in a charming traditional lodge, surrounded by the stunning landscapes of the Serengeti National Park. Observe wildlife up close and embrace the beauty of nature.',
+                starImage: '../images/starIcon.png',
+                 rate: '3',
+                price: '200 ETB',
+                totalPrice: '3000 ETB' 
+            },
+            {
+                image: '../Airbnb_images/Traditional/trad4.jfif',
+                heartImage: '../images/heartIcon.png',
+                location: 'Private room in Addis Ababa, Ethiopia',
+                title: ' Zulu Village Homestay',
+                under_score: '____',
+                description: ' Immerse yourself in the vibrant Zulu culture in South Africa. Stay in a traditional village home and experience local traditions, cuisine, and warm hospitality.',
+                starImage: '../images/starIcon.png',
+                 rate: '1',
+                price: '100 ETB',
+                totalPrice: '1900 ETB' 
+            },
+            {
+                image: '../Airbnb_images/L-shape/L5.webp',
+                heartImage: '../images/heartIcon.png',
+                location: 'Private room in Addis Ababa, Ethiopia',
+                title: 'Luxury Villa in Sodere',
+                under_score: '____',
+                description: 'Escape to the tranquility of the Atlas Mountains in this cozy mountain cabin. Connect with nature, enjoy hiking trails, and admire breathtaking mountain views. It has amenities like Tranquil location, hiking trails, mountain views.',
+                starImage: '../images/starIcon.png',
+                 rate: '2',
+                price: '400 ETB',
+                totalPrice: '4000 ETB' 
+            },
+            {
+                image: '../Airbnb_images/Condominium/condominium7.jpg',
+                heartImage: '../images/heartIcon.png',
+                location: 'Private room in Addis Ababa, Ethiopia',
+                title: 'Luxury Condominium in Addis Ababa',
+                under_score: '____',
+                description: 'Experience the epitome of luxury living in this stunning condominium located in the heart of Addis Ababa. With top-notch amenities including a swimming pool, fitness center, and 24/7 security, this condominium offers the perfect setting for a memorable stay.',
+                starImage: '../images/starIcon.png',
+                 rate: '4',
+                price: '2500 ETB',
+                totalPrice: '10000 ETB' 
+            },
+            {
+                image: '../Airbnb_images/Condominium/condominium3.jpg',
+                heartImage: '../images/heartIcon.png',
+                location: 'Private room in Addis Ababa, Ethiopia',
+                title: 'Family-Friendly Condominium in Bole ',
+                under_score: '____',
+                description: 'Ideal for families, this spacious condominium in Bole offers a safe and comfortable environment with amenities like a children\'s play area, parking, and easy access to nearby attractions',
+                starImage: '../images/starIcon.png',
+                 rate: '4',
+                price: '2000 ETB',
+                totalPrice: '24,000  ETB' 
+            },
+             {
+                image: '../Airbnb_images/Condominium/condominium4.webp',
+                heartImage: '../images/heartIcon.png',
+                location: 'Private room in Addis Ababa, Ethiopia',
+                title: 'Modern Condominium near the Airport  ',
+                under_score: '____',
+                description: 'Conveniently located near the airport, this modern condominium is perfect for travelers. Enjoy amenities like a fully equipped kitchenette, airport shuttle service, and a 24/7 concierge.',
+                starImage: '../images/starIcon.png',
+                 rate: '5',
+                price: '1500 ETB',
+                totalPrice: '6,000  ETB' 
+            },
+             {
+                image: '../Airbnb_images/Condominium/condominium5.jpg',
+                heartImage: '../images/heartIcon.png',
+                location: 'Private room in Addis Ababa, Ethiopia',
+                title: 'Budget-Friendly Condominium in Jemo ',
+                under_score: '____',
+                description: 'Enjoy a comfortable stay on a budget at this affordable condominium in Kazanchis. Amenities include a cozy bedroom, basic kitchen facilities, and proximity to popular restaurants and shops.',
+                starImage: '../images/starIcon.png',
+                 rate: '5',
+                price: '800 ETB',
+                totalPrice: '4800  ETB' 
+            },
+            {
+                image: '../Airbnb_images/Real-estate/real1.webp',
+                heartImage: '../images/heartIcon.png',
+                location: 'Private room in Addis Ababa, Ethiopia',
+                title: 'Charming Real-estate in the Phison District',
+                under_score: '____',
+                description: 'Discover the rich history of Ethiopia while staying in this charming condominium located in the heart of the historic district. With traditional decor and easy access to cultural sites, this is a true gem.',
+                starImage: '../images/starIcon.png',
+                 rate: '5',
+                price: '1200 ETB',
+                totalPrice: '9600  ETB' 
+            },
+             {
+                image: '../Airbnb_images/Real-estate/real3.webp',
+                heartImage: '../images/heartIcon.png',
+                location: 'Private room in Addis Ababa, Ethiopia',
+                title: 'Hayat Real-estate ',
+                under_score: '____',
+                description: 'Wake up to breathtaking ocean views at this seaside condominium on the coast of Ethiopia. Enjoy amenities like beach access, a swimming pool, and a fully furnished living space.',
+                starImage: '../images/starIcon.png',
+                 rate: '5',
+                price: '1800 ETB',
+                totalPrice: '7900  ETB' 
+            },
+        ];
+
+        // Create the gallery
+        // const gallery = document.querySelector('.searchResult');
+
+        images.forEach((image) => {
+
+// Create div element with class name "searchresult"
+const divSearchResult = document.createElement("div");
+divSearchResult.className = "searchResult";
+
+// Create the first image element
+const img1 = document.createElement("img");
+img1.src = image.image;
+
+// Create the second image element with class name "searchresult__heart"
+const img2 = document.createElement("img");
+img2.className = "searchResult__heart";
+img2.src = image.heartImage;
+img2.id = 'image';
+
+// Append the images to the search result div
+divSearchResult.appendChild(img1);
+divSearchResult.appendChild(img2);
+
+// Create div element with class name "searchresult__info"
+const divInfo = document.createElement("div");
+divInfo.className = "searchResult__info";
+
+// Create div element with class name "searchresult__infotop"
+const divInfoTop = document.createElement("div");
+divInfoTop.className = "searchResult__infoTop";
+
+// Create elements inside "searchresult__infotop" div
+const location = document.createElement("p");
+location.textContent = image.location;
+const title = document.createElement("h3");
+title.textContent = image.title;
+const under_score = document.createElement("p");
+under_score.textContent = image.under_score;
+const description = document.createElement("p");
+description.textContent = image.description;
+
+// Append the elements to "searchresult__infotop" div
+divInfoTop.appendChild(location);
+divInfoTop.appendChild(title);
+divInfoTop.appendChild(under_score);
+divInfoTop.appendChild(description);
+
+// Append "searchresult__infoTop" div to "searchResult__info" div
+divInfo.appendChild(divInfoTop);
+
+
+// Create div element with class name 'searchresult__infobottom'
+var infobottomDiv = document.createElement('div');
+infobottomDiv.className = 'searchResult__infoBottom';
+
+// Create div element with class name 'searchresult__stars'
+var starsDiv = document.createElement('div');
+starsDiv.className = 'searchResult__stars';
+
+// Create paragraph element
+var starsParagraph = document.createElement('p');
+
+// Create image element
+var starsImage = document.createElement('img');
+starsImage.src = image.starImage; // replace with the actual image source
+
+// Create strong element
+var starsStrong = document.createElement('strong');
+starsStrong.textContent = image.rate; // replace with the desired text
+
+
+// Append image and strong elements to the paragraph element
+starsParagraph.appendChild(starsImage);
+starsParagraph.appendChild(starsStrong);
+
+// Append the paragraph element to the 'searchresult__stars' div
+starsDiv.appendChild(starsParagraph);
+
+// Create div element with class name 'searchresult__price'
+var priceDiv = document.createElement('div');
+priceDiv.className = 'searchResult__price';
+
+// Create h2 element
+var priceH2 = document.createElement('h2');
+priceH2.textContent = image.price + ' / night'; // replace with the desired text
+
+// Create paragraph element
+var priceParagraph = document.createElement('p');
+priceParagraph.textContent = image.totalPrice +' total'; // replace with the desired text
+
+// Append both elements to the 'searchresult__price' div
+priceDiv.appendChild(priceH2);
+priceDiv.appendChild(priceParagraph);
+
+// Append 'searchresult__star' div to the 'searchresult__infobottom' div
+infobottomDiv.appendChild(starsDiv);
+
+//Append 'searchresult__price' div to the 'searchresult__infobottom' div
+infobottomDiv.appendChild(priceDiv);
+
+// Append the 'searchresult__infobottom' div to the 'searchresult__info' div
+divInfo.appendChild(infobottomDiv);
+
+// Append "searchresult__info" div to "searchresult" div
+divSearchResult.appendChild(divInfo);
+
+// Finally, append the "searchresult" div to the document body or any desired parent element
+document.body.appendChild(divSearchResult);
+});
+
+
+function searchImages(query) {
+  var matchingImages = [];
+
+  for (var i = 0; i < images.length; i++) {
+    var image = images[i];
+
+    // Perform a search by title or price
+    if (image.title.toLowerCase().includes(query.toLowerCase()) || image.price === query) {
+      matchingImages.push(image);
+    }
+  }
+
+  // Display the search results on the webpage
+  var searchResultsContainer = document.getElementById('search-results');
+
+  if (matchingImages.length === 0) {
+    searchResultsContainer.innerHTML = "No search results found.";
+  } else {
+    searchResultsContainer.innerHTML = ""; // Clear any previous results
+
+    for (var j = 0; j < matchingImages.length; j++) {
+      var matchedImage = matchingImages[j];
+
+      // Generate the HTML or UI elements to display the matched images
+      var imageElement = document.createElement('div');
+      imageElement.className = 'results';
+      imageElement.innerHTML = `
+      <img src=${matchedImage.image}>
+        <h3>${matchedImage.title}</h3>
+        <p>Description: ${matchedImage.description}</p>
+        <p>Price: ${matchedImage.price}</p>
+        
+      `;
+
+      searchResultsContainer.appendChild(imageElement);
+    }
+  }
+}
+
+// Example usage:
+// Assuming you have a search input field with ID 'search-input' and a search button with ID 'search-button'
+document.getElementById('search-button').addEventListener('click', function() {
+ var search = document.getElementById('search-input');
+    var error = document.getElementById('error');
+  var query = search.value;
+  if (search.value.length == 0){
+    error.textContent = '';
+    error.textContent = 'Please Insert Accomodation title you want to search for';
+  }
+  else{
+    error.textContent = '';
+    searchImages(query);
+  }
+});
+    </script>
+   
+		
+ <!-- Include footer -->
+   <object data="footer.html" id="footer" style="width:100%"></object>
+
+<script type="text/javascript" src="../js/combo.js"></script>
+<script type="text/javascript" src="../js/script.js"></script>
+</body>
+</html>
+

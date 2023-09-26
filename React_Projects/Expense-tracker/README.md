@@ -14,8 +14,7 @@ This Expense Tracker App is a mini project developed using ReactJS. It helps use
 4. After the installation completes, run the command `npm start` to start the development server.
 5. Start using the Expense Tracker App by adding expenses, setting budgets, and managing your finances.
 
-Contributing:
+## Contribution
 If you would like to contribute to this project, you can fork the repository, make your changes, and submit a pull request. Your contributions and improvements are highly appreciated.
 
-Contact:
 For any questions, suggestions, or feedback, please feel free to reach out to neimanesru34@gmail.com . Your input is valuable in improving this project and making it more useful for users.

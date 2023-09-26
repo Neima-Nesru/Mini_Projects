@@ -26,4 +26,6 @@ Each project is contained in a separate directory within this repository. To run
 
 Contributions are welcome! If you have any suggestions or improvements for any of the projects, feel free to submit a pull request.
 
-To reach out to me neimanesru34@gmail.com
+To reach out to me:
+email: neimanesru34@gmail.com
+linkedin: https://www.linkedin.com/in/neima-nesru-633a5024b

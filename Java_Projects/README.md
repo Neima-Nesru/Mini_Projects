@@ -1,6 +1,6 @@
 ## GPA Calculator GUI Application
 
-This mini project is a Graphical User Interface (GUI) application developed in Java using JDBC. It allows users to calculate their Grade Point Average (GPA) based on the marks/grades obtained in different subjects.
+This mini project is a Graphical User Interface (GUI) application developed in Java using JDBC. It allows students to calculate their Grade Point Average (GPA) based on the marks/grades obtained in different subjects.
 
 ## Features
 

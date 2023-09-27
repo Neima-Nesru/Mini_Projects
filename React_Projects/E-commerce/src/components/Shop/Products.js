@@ -12,13 +12,19 @@ const DUMMY_PRODUCTS = [
     id: 'p2',
     price: 2320,
     title: 'Abaya',
-    description: 'Unique and Fashion Covering.'
+    description: 'Fashion Covering.'
   },
   {
     id: 'p3',
     price: 800,
     title: 'Book',
     description: 'Amazing Book.'
+  },
+  {
+    id: 'p4',
+    price: 800,
+    title: 'Banana',
+    description: 'Sweet Fruit.'
   },
 
 ]

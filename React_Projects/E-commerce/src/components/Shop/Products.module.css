@@ -1,5 +1,5 @@
 .products h2 {
-  color: white;
+
   margin: 2rem auto;
   text-align: center;
   text-transform: uppercase;
@@ -9,4 +9,17 @@
   list-style: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+}
+
+@media screen and (max-width:767px) {
+  .products ul {
+
+    flex-direction: column;
+  }
 }

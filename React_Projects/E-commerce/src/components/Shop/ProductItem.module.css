@@ -2,6 +2,7 @@
   background-color: #c1c1a0;
   margin: 1rem;
   border-radius: 5px;
+  width: 20%;
 }
 
 .item h3 {
@@ -11,16 +12,20 @@
 
 .item header {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: baseline;
 }
 
 .price {
-  border-radius: 30px;
-  padding: 0.15rem 1.5rem;
-  background-color: #927b05;
-  color: white;
-  font-size: 1.5rem;
+  width: fit-content;
+  border-bottom: 1px solid #927b05;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.price:hover {
+  color: #927b05;
 }
 
 .item p {
@@ -30,4 +35,10 @@
 .actions {
   display: flex;
   justify-content: flex-end;
+}
+
+@media screen and (max-width:767px) {
+  .item {
+    width: 60%;
+  }
 }

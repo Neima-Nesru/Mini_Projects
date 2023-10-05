@@ -1,0 +1,47 @@
+.recipe {
+  max-width: 50rem;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.recipe img {
+  width: 30rem;
+  border-radius: 4px;
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.actions a,
+.actions button {
+  padding: 0.25rem 1rem;
+  text-decoration: none;
+  font: inherit;
+  cursor: pointer;
+  color: #8a2b06;
+  font-weight: bold;
+}
+
+.actions button {
+  background-color: transparent;
+  border: none;
+
+}
+
+.actions button:hover,
+.actions a:hover {
+  background-color: red;
+  color: white;
+  border-radius: 1rem;
+  font-weight: initial;
+}
+
+.actions a:hover {
+  background-color: #8a2b06;
+
+}

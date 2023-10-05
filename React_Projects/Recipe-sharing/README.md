@@ -1,6 +1,5 @@
-Recipe Sharing React Application Readme
+## Recipe Sharing React Application
 
-Description:
 This Recipe Sharing React Application is a user-friendly platform that allows users to share their favorite recipes with each other. Users can create an account, log in, browse different recipes, post new recipes, and interact with other users by commenting on and liking their recipes. The application provides an easy and convenient way for users to discover new recipes, share their cooking experiences, and connect with other food enthusiasts.
 
 ## Features

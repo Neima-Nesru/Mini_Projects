@@ -30,3 +30,4 @@ Contributions are welcome! If you'd like to contribute to this project, please f
 4. Push to the branch (`git push origin feature/improvement`)
 5. Create a new Pull Request.
 
+For any questions or support, please reach out to neimanesru34@gmail.com.

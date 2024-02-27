@@ -1,0 +1,94 @@
+CREATE USER 'RentalSystem'@'%' IDENTIFIED VIA mysql_native_password USING '***';GRANT SELECT, INSERT, UPDATE, DELETE, FILE ON *.* TO 'RentalSystem'@'%' REQUIRE NONE WITH MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0;
+remaining tasks on the project 
+  
+when user delete acct , the info related to his/her info should be deleted! (booking, posted homes) - not done yet :(
+
+finished tasks
+  1. security enhancement
+      validation
+      sanitization
+      regex
+
+  2. crud - done
+      create : create account, add home, book
+      read : extract user, it's role and other necessary info
+             read homes posted by different users 
+      update : edit user, edit home, edit booking
+      delete : delete home, delete booking
+
+  3. search - done
+  5. file handling - done
+      home images and profile picture adding
+
+  6. admin - done
+       edit and delete user, home and booking info
+
+CREATE USER 'HomeRentalSystem'@'%' IDENTIFIED VIA mysql_native_password USING '***';GRANT SELECT, INSERT, UPDATE, DELETE, FILE ON *.* TO 'HomeRentalSystem'@'%' REQUIRE NONE WITH MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0;
+
+database{
+  tables{
+    users -> id, username, password, email, phone, address
+    homes -> id, u_id, title, description, price, number of rooms, location
+    booking -> id, h_id(FK), u_id(FK), checkinDate, checkoutDate, status(pending, confirmed, canceled)
+   // review -> id, h_id(FK), u_id(FK), rating, comment
+  }
+} 
+
+landing page
+  {
+    header:logo,login/signup
+    body:image,title,location,price,detail(iff loggedin)
+  }
+login
+{
+  form with username and password
+}
+signup 
+{
+  gives option to signup as renter/landlord/admin
+  renter{ username, email,pro-pic,phone, password, confirmPass, renter(checked box)
+            have privilidge to rent
+        }
+  landlord{ username, email,pro-pic,phone, password, confirmPass, landlord(checked box)
+            have privilidge to add homes
+  }
+}
+  renter-page
+  {
+    header:logo,search bar,home,username,logout,renter-tag
+    body:list of homes with title,desc,price,rent-btn
+    rent-btn-click{
+      register (checkin & checkout dates)
+      checks if selected home matches with clicker's money {rented confirmation} else{couldn't afford}
+    }
+  }
+  landlord-page
+  {
+    header:logo,search bar,home,username,logout,landlord-tag
+    body:list of homes posted by him/her with title,desc,price,review,addHome-btn   
+  }
+  add-home
+  {
+    if(renter){can't access}
+    else{
+      header:logo,search bar,home,username,logout
+      body:form(home img,title,desc,price,contact,add-btn)
+    }
+  }
+  renter-profile
+  {
+    header:logo,home username,logout
+    body:{
+      header:username with edit profile link,pro-pic
+      body:rented homes,removeHome-btn(gizew syalk),give feedback
+    }
+  }
+  landlord-profile
+  {
+    header:logo,home username,logout
+    body:{
+      header:username with edit profile link,pro-pic
+      body:posted homes,removeHome-btn(if rented), addHome-btn
+    }
+  }
+chatting

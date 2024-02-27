@@ -30,8 +30,3 @@ Contributions are welcome! If you'd like to contribute to this project, please f
 4. Push to the branch (`git push origin feature/improvement`)
 5. Create a new Pull Request.
 
-Please ensure that your pull request adheres to the project's coding standards and includes relevant documentation or tests if applicable.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).

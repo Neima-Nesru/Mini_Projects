@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">GPA-Calculator</string>
+
+    <string-array name="ethiopian_universities">
+        <item>Select your University</item>
+        <item>St. Mary\'s University</item>
+        <item>Addis Ababa University</item>
+        <item>Jimma University</item>
+        <item>Mekelle University</item>
+        <item>Hawassa University</item>
+        <item>Bahir Dar University</item>
+        <item>Gondar University</item>
+        <item>Arba Minch University</item>
+        <item>Wollo University</item>
+        <item>Haramaya University</item>
+        <item>Debre Markos University</item>
+        <!-- Add more universities as needed -->
+    </string-array>
+
+</resources>

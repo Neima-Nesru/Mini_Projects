@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/addHomeMenu"
+        android:title="@string/addHome"
+
+        />
+
+
+    <item
+        android:id="@+id/menu_language"
+        android:title="@string/language">
+
+        <menu>
+            <item
+                android:id="@+id/menu_amharic"
+                android:title="@string/amharic" />
+            <item
+                android:id="@+id/menu_english"
+                android:title="@string/english" />
+        </menu>
+    </item>
+    <item
+        android:id="@+id/menu_Exit"
+        android:title="@string/exit">
+    </item>
+</menu>

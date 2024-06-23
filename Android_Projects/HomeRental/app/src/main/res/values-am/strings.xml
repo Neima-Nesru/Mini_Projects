@@ -1,0 +1,102 @@
+<resources>
+
+    <!--    menu-->
+
+    <string name="addHome">ቤት አክል</string>
+    <string name="yourProfile">የእርስዎ መገለጫ</string>
+    <string name="logout">ውጣ</string>
+
+    <!-- ይመዝገቡ እና ይግቡ -->
+    <string name="app_name">የቤት ኪራይ</string>
+    <string name="signup">መመዝገብ</string>
+    <string name="login">ግባ</string>
+
+    <string name= "username">የተጠቃሚ ስም</string>
+    <string name="phone">ስልክ ቁጥር</string>
+    <string name="password">የይለፍ ቃል</string>
+    <string name="confirm">አረጋግጥ</string>
+    <string name="haveAcc">አስቀድሞ መለያ አለህ? እዚህ ይግቡ።</string>
+    <string name="createAcc">መለያ የለህም? አዲስ እዚህ ይፍጠሩ።</string>
+
+    <string name="welcome">እንኳን በደህና መጡ፣</string>
+    <string name="missed"> ተናፍቀዋል!</string>
+
+
+    <string name= "phone_number">ስልክ ቁጥር</string>
+    <string name="email">ኢሜል</string>
+
+
+    <string name="dob">የትውልድ ቀን</string>">
+    <string name="website">ድረ-ገጽ</string>
+    <string name="english">እንግሊዘኛ</string>
+    <string name="amharic">አማርኛ</string>
+    <string name="language">ቋንቋ</string>
+    <string name= "exit">ውጣ</string>
+    <string name= "todo" translatable= "false"> ማድረግ</string>
+    <string name= "todo2" translatable="false">TODO2</string>
+
+    <string name="label_name">ስም: %1$s</string>
+    <string name="label_phone_number">ስልክ ቁጥር፡ %1$s</string>
+    <string name="label_email">ኢሜል፡ %1$s</string>
+    <string name="label_address">አድራሻ፡ %1$s</string>
+    <string name="label_company">ኩባንያ፡ %1$s</string>
+    <string name="label_dob">የትውልድ ቀን፡ %1$s</string>
+    <string name="label_gender">ጾታ፡ %1$s</string>
+    <string name="label_how_did_you_hear">ስለእኛ እንዴት ሰማህ? %1$s</string>
+    <string name="share">አጋራ</string>
+    <string name="Delete">ሰርዝ</string>
+
+
+    <!-- መገለጫ-->
+    <string name= "profile_picture">የመገለጫ ሥዕል</string>
+    <string name= "edit_profile">መገለጫህን አርትዕ</string>
+    <string name="yourProperties">የተከራዩ/የተዘረዘሩ ንብረቶች</string>
+    <string name= "edit" > አርትዕ</string>
+    <string name="delete">ሰርዝ</string>
+
+    <!-- ዝርዝር ቤቶች-->
+    <string name="Allhomes"> ዝርዝር ቤቶች</string>
+    <string name="list">ንብረትህን ይዘርዝሩ</string>
+    <string name="type">ከእነዚህ ውስጥ የትኛው ነው የእርስዎን ንብረት በተሻለ ሁኔታ የሚገልጸው?</string>
+
+    <string name="car">መኪና</string>
+    <string name="house">ቤት</string>
+    <string name="shop">ሱቅ</string>
+    <string name="land">መሬት</string>
+
+    <string name="giveTitle">ንብረትዎን ርዕስ ይስጡት</string>
+    <string name="giveDesc">ንብረትዎን ይግለጹ</string>
+    <string name= "givePrice">ዋጋ አዘጋጅ</string>
+    <string name="image">የንብረትህን ፎቶ ስቀል</string>
+    <string name="publish">አትም</string>
+
+    <!-- ሁሉም ቤቶች-->
+    <string name="search">ቤቶችን ፈልግ</string>
+    <string name= "home_image">የቤት ምስል</string>
+    <string name="title"> ርዕስ</string>
+    <string name="price">ዋጋ</string>
+    <string name="rating">ደረጃ ስጥ</string>
+
+    <!-- የአንድ ቤት ዝርዝር -->
+    <string name="checkIn">ይግቡ</string>
+    <string name="checkOut">ይመልከቱት</string>
+    <string name="contact">አከራይ ያነጋግሩ</string>
+    <string name="book">አሁኑኑ ያስይዙ</string>
+    <string name="location">አካባቢ</string>
+    <string name="desc">መግለጫ</string>
+    <string name="review">ግምገማዎች</string>
+    <string name="leaveReview">ከግምገማ ይውጡ</string>
+
+    <!-- ግምገማ-->
+    <string name="rate">የቤቱን ደረጃ ይስጡት</string>
+    <string name="comment">የእርስዎ አስተያየት</string>
+    <string name="submit">አስረክብ</string>
+
+    <!-- ውይይት -->
+    <string name="posting">መለጠፍ</string>
+    <string name="error">ስህተት</string>
+    <string name="confirmation">እርግጠኛ ነዎት መለጠፍ ይፈልጋሉ?</string>
+    <string name="yes">አዎ</string>
+    <string name="no">አይ</string>
+
+</resources>

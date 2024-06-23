@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="GPA Calculator"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--course 1-->
+
+    <Spinner
+        android:id="@+id/sPUnivs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:spinnerMode="dropdown"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/eTCourseTitle"
+        android:layout_width="150sp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:hint="Course Title"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sPUnivs" />
+
+    <EditText
+        android:id="@+id/eTGradePt"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:hint="Grade"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toEndOf="@+id/eTCourseTitle"
+        app:layout_constraintTop_toBottomOf="@+id/sPUnivs" />
+
+    <EditText
+        android:id="@+id/eTCrHr"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="40dp"
+        android:ems="10"
+
+        android:hint="Cr Hr"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/eTGradePt"
+        app:layout_constraintTop_toBottomOf="@+id/sPUnivs" />
+
+<!-- course2    -->
+    <EditText
+        android:id="@+id/eTCourseTitle2"
+        android:layout_width="150sp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:hint="Course Title"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eTCourseTitle" />
+
+    <EditText
+        android:id="@+id/eTGradePt2"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:hint="Grade"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toEndOf="@+id/eTCourseTitle2"
+        app:layout_constraintTop_toBottomOf="@+id/eTGradePt" />
+
+    <EditText
+        android:id="@+id/eTCrHr2"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="40dp"
+        android:ems="10"
+
+        android:hint="Cr Hr"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/eTGradePt2"
+        app:layout_constraintTop_toBottomOf="@+id/eTCrHr" />
+
+<!--    course 3-->
+    <EditText
+        android:id="@+id/eTCourseTitle3"
+        android:layout_width="150sp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:hint="Course Title"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eTCourseTitle2" />
+
+    <EditText
+        android:id="@+id/eTGradePt3"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:hint="Grade"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toEndOf="@+id/eTCourseTitle3"
+        app:layout_constraintTop_toBottomOf="@+id/eTGradePt2" />
+
+    <EditText
+        android:id="@+id/eTCrHr3"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="40dp"
+        android:ems="10"
+
+        android:hint="Cr Hr"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/eTGradePt3"
+        app:layout_constraintTop_toBottomOf="@+id/eTCrHr2" />
+
+<!-- course 4-->
+    <EditText
+        android:id="@+id/eTCourseTitle4"
+        android:layout_width="150sp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:hint="Course Title"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eTCourseTitle3" />
+
+    <EditText
+        android:id="@+id/eTGradePt4"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:hint="Grade"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toEndOf="@+id/eTCourseTitle4"
+        app:layout_constraintTop_toBottomOf="@+id/eTGradePt3" />
+
+    <EditText
+        android:id="@+id/eTCrHr4"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="40dp"
+        android:ems="10"
+
+        android:hint="Cr Hr"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/eTGradePt4"
+        app:layout_constraintTop_toBottomOf="@+id/eTCrHr3" />
+
+<!--    course 5-->
+    <EditText
+        android:id="@+id/eTCourseTitle5"
+        android:layout_width="150sp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:hint="Course Title"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eTCourseTitle4" />
+
+    <EditText
+        android:id="@+id/eTGradePt5"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:hint="Grade"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toEndOf="@+id/eTCourseTitle5"
+        app:layout_constraintTop_toBottomOf="@+id/eTGradePt4" />
+
+    <EditText
+        android:id="@+id/eTCrHr5"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="40dp"
+        android:ems="10"
+
+        android:hint="Cr Hr"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/eTGradePt5"
+        app:layout_constraintTop_toBottomOf="@+id/eTCrHr4" />
+
+<!--    course 6-->
+    <EditText
+        android:id="@+id/eTCourseTitle6"
+        android:layout_width="150sp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:hint="Course Title"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eTCourseTitle5" />
+
+    <EditText
+        android:id="@+id/eTGradePt6"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:hint="Grade"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toEndOf="@+id/eTCourseTitle6"
+        app:layout_constraintTop_toBottomOf="@+id/eTGradePt5" />
+
+    <EditText
+        android:id="@+id/eTCrHr6"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="40dp"
+        android:ems="10"
+
+        android:hint="Cr Hr"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/eTGradePt6"
+        app:layout_constraintTop_toBottomOf="@+id/eTCrHr5" />
+
+    <Button
+        android:id="@+id/calcBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="50dp"
+        android:text="Calculate GPA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eTGradePt6" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

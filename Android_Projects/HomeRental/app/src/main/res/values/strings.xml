@@ -1,0 +1,103 @@
+<resources>
+
+    <!--    menu-->
+
+    <string name="addHome">Add Home</string>
+    <string name="yourProfile">Your Profile</string>
+    <string name="logout">Logout</string>
+
+    <!--      Signup and Login-->
+    <string name="app_name">Home Rental</string>
+    <string name="signup">Signup</string>
+    <string name="login">Login</string>
+
+    <string name="username">Username</string>
+    <string name="phone">Phone Number</string>
+    <string name="password">Password</string>
+    <string name="confirm">Confirm</string>
+    <string name="haveAcc">Already have an account? Login here.</string>
+    <string name="createAcc">Don\'t have an account? create new here.</string>
+
+    <string name="welcome">Welcome back,</string>
+    <string name="missed"> Your have been missed!</string>
+
+
+    <string name="phone_number">Phone Number</string>
+    <string name="email">Email</string>
+
+
+    <string name="dob">Date of Birth</string>">
+    <string name="website">Website</string>
+    <string name="english">English</string>
+    <string name="amharic">Amharic</string>
+    <string name="language">Language</string>
+    <string name="exit">Exit</string>
+    <string name="todo" translatable="false">TODO</string>
+    <string name="todo2" translatable="false">TODO2</string>
+
+    <string name="label_name">Name: %1$s</string>
+    <string name="label_phone_number">Phone Number: %1$s</string>
+    <string name="label_email">Email: %1$s</string>
+    <string name="label_address">Address: %1$s</string>
+    <string name="label_company">Company: %1$s</string>
+    <string name="label_dob">Date of Birth: %1$s</string>
+    <string name="label_gender">Gender: %1$s</string>
+    <string name="label_how_did_you_hear">How did you hear about us? %1$s</string>
+    <string name="share">Share</string>
+    <string name="Delete">Delete</string>
+
+
+
+    <!--    profile-->
+    <string name="profile_picture">Profile Picture</string>
+    <string name="edit_profile">Edit your Profile</string>
+    <string name="yourProperties">Rented/Listed Properties</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+
+    <!--    list Homes-->
+    <string name="list">List your Property</string>
+    <string name="type">Which of these best describes your Property?</string>
+
+    <string name="car">Car</string>
+    <string name="house">House</string>
+    <string name="shop">Shop</string>
+    <string name="land">Land</string>
+
+    <string name="giveTitle">Give your Property a title</string>
+    <string name="giveDesc">Describe your Property</string>
+    <string name="givePrice">Set Price</string>
+    <string name="image">Upload photo of your Property</string>
+    <string name="publish">Publish</string>
+
+    <!--    All Homes-->
+    <string name="Allhomes"> All Homes</string>
+    <string name="search">Search for homes</string>
+    <string name="home_image">Home Image</string>
+    <string name="title">Title</string>
+    <string name="price">Price</string>
+    <string name="rating">Rate</string>
+
+    <!--    Detail of a Home-->
+    <string name="checkIn">Check in</string>
+    <string name="checkOut">Check out</string>
+    <string name="contact">Contact Landlord</string>
+    <string name="book">Book now</string>
+    <string name="location">Location</string>
+    <string name="desc">Description</string>
+    <string name="review">Reviews</string>
+    <string name="leaveReview">Leave Review</string>
+
+    <!--    review-->
+    <string name="rate">Rate the house</string>
+    <string name="comment">Your Comment</string>
+    <string name="submit">Submit</string>
+
+    <!--    dialogue -->
+    <string name="posting">Posting</string>
+    <string name="error">Error</string>
+    <string name="confirmation">Are you sure you want to post?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+
+</resources>
